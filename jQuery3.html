@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1>ACS Lure</h1>
+
+    <td><label>Langage:</label></td>
+    <td><input type="text" id="langage"></td>
+
+&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+
+    <td><label>Note:</label></td>
+    <td><input type="text" id="note"></td>
+
+&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+
+    <button id="ajouter">Ajouter</button>
+
+<br><br>
+
+<div class="fdg" style="display:flex;">
+
+    <td><p style="width: 35px;" id="output1"></p>
+    <p style="margin-left: 5px; width: 15px;" id="output2"></p></td>
+
+    <br><br>
+
+    <td><p style="width: 35px;" id="output3"></p>
+    <p style="margin-left: 5px; width: 15px;" id="output4"></p></td>
+
+    <br><br>
+<!-- 
+    <td><p style="background-color:cyan;width: 35px;" id="output5"></p>
+    <p style="background-color:green;margin-left: 5px; width: 15px;" id="output6"></p></td> -->
+
+</div>
+
+<br><br>
+
+    <p id="output0">Moyenne:</p>
+    
+
+
+<script>
+
+$(document).ready(function(){
+
+$("#ajouter").click(function () {
+
+    $("#output1").css( "background-color", "red" );
+    $("#output2").css( "background-color", "green" );
+
+   $("#output1").html(
+       $("#langage").val()
+   );
+   $("#output2").html(
+       $("#note").val()
+   );
+});
+
+
+$("#ajouter").click(function () {
+
+$("#output3").css( "background-color", "red" );
+$("#output4").css( "background-color", "green" );
+
+$("#output3").html(
+   $("#langage").val()
+);
+$("#output4").html(
+   $("#note").val()
+);
+});
+
+$("output0").html(
+    $("output0").val(("output2" + "output4" + "output6") / 3)
+)
+});
+
+</script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+        <td><label><h4>Nom:</h4></label></td>
+    <td><input type="text" id="nom"></td>
+
+<br><br>
+
+    <td><label><h4>Sexe:</h4></label></td>
+    <td>Masculin<input type="radio" name="sexe" value="Masculin"></td>
+    <td>Féminin<input type="radio" name="sexe" value="Féminin"></td>
+
+<br><br>
+
+    <button type="submit" id="submit"> Récupérer les valeurs </button>
+
+<br><br>
+
+    <p style="color:green; font-weight: bold; font-size: 18px;" id="output"></p>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#submit").click(function () {
+            
+           $("#output").html(
+               $("#nom").val() + "<br/>" +
+               $("input:radio[name=sexe]:checked").val()
+           );
+       });
+    });
+    
+</script>
+</body>
+</html>

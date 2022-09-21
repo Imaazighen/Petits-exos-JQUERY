@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates nesciunt maiores 
+        quaerat et inventore laboriosam aliquid pariatur dignissimos, 
+        totam sapiente quod fuga unde, velit animi? Praesentium debitis porro repudiandae.</p>
+
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates nesciunt maiores 
+       quaerat et inventore laboriosam aliquid pariatur dignissimos, 
+       totam sapiente quod fuga unde, velit animi? Praesentium debitis porro repudiandae.
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates nesciunt maiores 
+       quaerat et inventore laboriosam aliquid pariatur dignissimos, 
+       totam sapiente quod fuga unde, velit animi? Praesentium debitis porro repudiandae.</p>
+
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates nesciunt maiores 
+       quaerat et inventore laboriosam aliquid pariatur dignissimos, 
+       totam sapiente quod fuga unde, velit animi? Praesentium debitis porro repudiandae.</p>
+
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates nesciunt maiores 
+        quaerat et inventore laboriosam aliquid pariatur dignissimos, 
+        totam sapiente quod fuga unde, velit animi? Praesentium debitis porro repudiandae.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates nesciunt maiores 
+        quaerat et inventore laboriosam aliquid pariatur dignissimos, 
+        totam sapiente quod fuga unde, velit animi? Praesentium debitis porro repudiandae.</p>
+
+<script>
+
+$(document).ready(function(){
+
+// Disparaitre au clic
+    $("#p1").click(function(){
+        $('#p1').hide();
+    })
+
+// disparaitre au double clic
+    $("#p2").dblclick(function(){
+        $('#p2').hide();
+    })
+
+// Changer la couleur du paragraphe au survol et retourner a la couleur initiale en ressortant
+    $("#p3").on("mouseover",function() {
+        $("#p3").css( "color", "red" );
+    });
+
+    $("#p3").on("mouseleave",function() {
+        $("#p3").css( "color", "black" );
+    });
+
+// Agrandir au clic
+    $("#p4").click(function(){
+        $('#p4').css("font-size", 30);
+    })
+})
+
+</script>
+
+</body>
+</html>
